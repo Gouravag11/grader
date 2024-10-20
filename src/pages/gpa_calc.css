@@ -1,0 +1,136 @@
+:root {
+    --background-color: #f5f5f5; /* Light background */
+    --surface-color: #c4b9b97d; /* Light surface (form background) */
+    --on-surface-color: #ffffff; /* Light input background */
+    --border-color: #bbb; /* Light border */
+    --text-color: #333; /* Light text color */
+    --button-bg: #007bff; /* Button background */
+    --button-hover-bg: #0056b3; /* Button hover background */
+    --warning-color: rgb(255, 245, 47); /* Warning color */
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+    --background-color: #222; /* Dark background */
+    --surface-color: #1b1b1b; /* Dark surface (form background) */
+    --on-surface-color: #333; /* Dark input background */
+    --border-color: #333; /* Dark border */
+    --text-color: #f5f5f5; /* Dark text color */
+    --button-bg: #007bff; /* Button background */
+    --button-hover-bg: #0056b3; /* Button hover background */
+    --warning-color: rgb(255, 165, 0); /* Warning color */
+}
+
+/* Center the content of the whole page */
+.GpaCalculatorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+/* Style the title */
+.GpaCalculatorPage h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Dynamic text color based on theme */
+}
+
+/* Center the form and add a rounded box */
+form {
+    background: var(--surface-color);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 40px 20px 60px; /* Adjusted padding for consistency */
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Style the select inputs */
+select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 45%;
+    border-radius: 5px;
+    background-color: var(--on-surface-color); /* Dynamic input background */
+    border: 1px solid var(--border-color); /* Dynamic border color */
+    font-size: 1rem;
+    color: var(--text-color); /* Dynamic text color */
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--button-bg); /* Dynamic button background */
+    color: #ffffff; /* White text for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: var(--button-hover-bg); /* Dynamic button hover background */
+}
+
+/* Style GPA result display */
+.GPAResult {
+    background: var(--surface-color);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color); /* Dynamic text color */
+}
+
+/* Style the warning message */
+.warning {
+    color: var(--warning-color); /* Dynamic warning color */
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 10px 20px;
+    }
+
+    /* Stack the select inputs vertically on smaller screens */
+    select {
+        width: 100%;
+    }
+
+    /* Adjust button width for mobile */
+    button {
+        width: 100%;
+    }
+
+    .GpaCalculatorPage h1 {
+        font-size: 1.5rem;
+    }
+
+    .GPAResult {
+        width: 90%;
+        padding: 10px 15px;
+    }
+
+    .warning {
+        font-size: 0.7rem;
+        margin-top: 3px;
+    }
+}
