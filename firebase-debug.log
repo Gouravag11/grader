@@ -1,0 +1,50 @@
+[debug] [2024-10-20T06:49:16.838Z] ----------------------------------------------------------------------
+[debug] [2024-10-20T06:49:16.841Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\goura\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:vitgrader
+[debug] [2024-10-20T06:49:16.841Z] CLI Version:   13.22.1
+[debug] [2024-10-20T06:49:16.841Z] Platform:      win32
+[debug] [2024-10-20T06:49:16.841Z] Node Version:  v20.16.0
+[debug] [2024-10-20T06:49:16.841Z] Time:          Sun Oct 20 2024 12:19:16 GMT+0530 (India Standard Time)
+[debug] [2024-10-20T06:49:16.841Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-20T06:49:16.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-20T06:49:16.896Z] > authorizing via signed-in user (gouravagarwal011@gmail.com)
+[debug] [2024-10-20T06:49:16.896Z] [iam] checking project mini-webs for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-20T06:49:16.897Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:16.897Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:16.898Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-webs:testIamPermissions [none]
+[debug] [2024-10-20T06:49:16.898Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-webs:testIamPermissions x-goog-quota-user=projects/mini-webs
+[debug] [2024-10-20T06:49:16.898Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-webs:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-20T06:49:22.545Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-webs:testIamPermissions 200
+[debug] [2024-10-20T06:49:22.546Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-webs:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-20T06:49:22.546Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:22.546Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:22.546Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mini-webs [none]
+[debug] [2024-10-20T06:49:23.300Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mini-webs 200
+[debug] [2024-10-20T06:49:23.301Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mini-webs {"projectId":"mini-webs","projectNumber":"556968329495","displayName":"Mini Webs","name":"projects/mini-webs","resources":{"hostingSite":"mini-webs"},"state":"ACTIVE","etag":"1_d3a7da99-0938-4cb8-b645-590d164a2ab2"}
+[info] 
+[info] === Deploying to 'mini-webs'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-10-20T06:49:23.307Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:23.307Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:23.307Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vitgrader/versions [none]
+[debug] [2024-10-20T06:49:23.307Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vitgrader/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-10-20T06:49:25.038Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vitgrader/versions 200
+[debug] [2024-10-20T06:49:25.038Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vitgrader/versions {"name":"projects/556968329495/sites/vitgrader/versions/722a72aefd3ef999","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[vitgrader]: beginning deploy... 
+[info] i  hosting[vitgrader]: found 7 files in public 
+[debug] [2024-10-20T06:49:25.050Z] [hosting] uploading with 200 concurrency
+[debug] [2024-10-20T06:49:25.070Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:25.070Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:25.071Z] [hosting] hash cache [cHVibGlj] stored for 7 files
+[debug] [2024-10-20T06:49:25.071Z] [hosting][hash queue][FINAL] {"max":16,"min":0,"avg":2.2857142857142856,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":19}
+[debug] [2024-10-20T06:49:25.071Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/556968329495/sites/vitgrader/versions/722a72aefd3ef999:populateFiles [none]
+[debug] [2024-10-20T06:49:25.071Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/556968329495/sites/vitgrader/versions/722a72aefd3ef999:populateFiles {"files":{"/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/manifest.json":"ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c","/logo512.png":"212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d","/logo192.png":"79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0","/favicon.ico":"27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d","/404.html":"762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890","/index.html":"6de850571f0dc9fe7ed0790df6eddeb50818dae949f2a1f619770092dcbcfefa"}}
+[debug] [2024-10-20T06:49:25.612Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/556968329495/sites/vitgrader/versions/722a72aefd3ef999:populateFiles 200
+[debug] [2024-10-20T06:49:25.612Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/556968329495/sites/vitgrader/versions/722a72aefd3ef999:populateFiles {"uploadRequiredHashes":["6de850571f0dc9fe7ed0790df6eddeb50818dae949f2a1f619770092dcbcfefa"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/vitgrader/versions/722a72aefd3ef999/files"}
+[debug] [2024-10-20T06:49:25.612Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:25.612Z] Checked if tokens are valid: true, expires at: 1729409878162
+[debug] [2024-10-20T06:49:25.613Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/vitgrader/versions/722a72aefd3ef999/files/6de850571f0dc9fe7ed0790df6eddeb50818dae949f2a1f619770092dcbcfefa [none]
+[debug] [2024-10-20T06:49:25.613Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/vitgrader/versions/722a72aefd3ef999/files/6de850571f0dc9fe7ed0790df6eddeb50818dae949f2a1f619770092dcbcfefa [stream]
+[debug] [2024-10-20T06:49:25.614Z] [hosting][populate queue][FINAL] {"max":543,"min":543,"avg":543,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":545}
+[debug] [2024-10-20T06:49:25.614Z] [hosting] uploads queued: 1
